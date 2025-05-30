@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservasi Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Lyralize Hotel</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="room">
+      <img src="room1.jpg" alt="Room 1" />
+      <h3>Standard Room</h3>
+      <p>Our standard room offers a comfortable stay with basic amenities.</p>
+    </div>
+    <div class="room">
+      <img src="room2.jpg" alt="Room 2" />
+      <h3>Deluxe Room</h3>
+      <p>Upgrade your stay with our deluxe room, featuring additional space and luxury amenities.</p>
+    </div>
+  </section>
+
+  <section id="order">
+    <h2>Book Your Stay</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" name="checkin" required />
+
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" name="checkout" required />
+
+      <label for="message">Special Requests:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <ul>
+      <li>Phone: 085658611747 (WhatsApp)</li>
+      <li>Email: info@lyralizehotel.com</li>
+      <li>Instagram: @lyralizehotel</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/6285658611747" target="_blank" title="WhatsApp">📱</a>
+      <a href="https://instagram.com/lyralizehotel" target="_blank" title="Instagram">📷</a>
+      <a href="mailto:info@lyralizehotel.com" title="Email">✉️</a>
+    </div>
+    <button id="toggleMode">🌙 Dark Mode</button>
+    <p>&copy; 2025 Lyralize Hotel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('toggleMode');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleButton.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
